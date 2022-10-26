@@ -6,10 +6,6 @@ const tabs = await chrome.tabs.query({
   active: true
 });
 
-tabs.add(await
-    chrome.tabs.query(
-        {active:false}
-    ));
 // translation friendly sorting, noice
 const collator = new Intl.Collator();
 tabs.sort((a, b) => collator.compare(a.title, b.title));
