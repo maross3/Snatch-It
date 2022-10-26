@@ -39,4 +39,5 @@ export function makeTabs(tabs) {
         const group = await chrome.tabs.group({ tabIds });
         await chrome.tabGroups.update(group, { title: "DOCS" });
     });
+    return elements;
 }
