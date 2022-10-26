@@ -1,8 +1,6 @@
 import { graph } from "./graph.js";
 import { makeTabs } from "./tabs_helper.js"
 
-
-
 // todo populate graph
 // graph.js
   // make a graph
