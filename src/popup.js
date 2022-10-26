@@ -1,5 +1,5 @@
 import { makeTabs } from "./tabs_helper.js"
-import {graph} from "./graph";
+import { graph } from "./graph.js";
 
 // todo populate graph
 // graph.js
@@ -47,10 +47,22 @@ const allTabs = await chrome.tabs.query({ });
 let tabs = makeTabs(allTabs);
 // code goes here... so silent :O
 
-graph.serializeGraph();
+let curGraph = new graph;
 
-console.log(graph.deserializeGraph());
+curGraph.serializeGraph();
+console.log(curGraph.deserializeGraph());
+
+/*
+if (node.Clicked){
+  let input = clickCommand;
+  input.context = new Context(node);
+}
+
+curGraph.assignCommand(input);
+*/
+
 // MVC:
+
 // graph.js == model.
 // view_ports.js == view.
 // popup.js == controller
