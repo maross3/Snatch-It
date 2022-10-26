@@ -1,5 +1,5 @@
 
-function populateTabs(tabs, template){
+export function populateTabs(tabs, template){
     let elements = new Set();
 
     for (const tab of tabs) {
