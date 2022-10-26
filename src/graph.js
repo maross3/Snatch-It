@@ -1,7 +1,7 @@
 // https://developer.chrome.com/docs/extensions/reference/storage/
 // User data can be automatically synced with Chrome sync (using storage.sync)
 
-export class graph{
+export class graph {
     #storageKey = 'snatch-it';
 
     serializeGraph() {
