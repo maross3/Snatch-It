@@ -1,29 +1,33 @@
 
 export const insertCommand = {
     iD: 'insert',
-    context: null
+    context: contextData
 }
 
 export const removeCommand = {
     iD: 'remove',
-    context: null
+    context: contextData
 }
 
 export const bookmarkCommand = {
     iD: 'bookmark',
-    context: null
+    context: contextData
 }
 
 export const addNotesCommand = {
     iD: 'addNotes',
-    context: null
+    context: contextData
 }
 
 export const createGroupCommand = {
     iD: 'createGroup',
-    context: null
+    context: contextData
 }
 
+let contextData = {
+    node: null,
+    success: contextData
+}
 // context = {
 // note: string
 // graphNode: node

@@ -19,16 +19,24 @@ class view {
 }
 
 class hierarchy_view extends view {
+    #list = null;
+
     insert(context){
         // overrides
+        list.invalidate(context.node);
+
+
+        // context changes? call super
         super.insert(context);
     }
 }
 
 class sandbox_view extends view {
 
-    insert(){
+    insert(context){
         // overrides
+
+        // context changes? call super
         super.insert(context);
     }
 }
