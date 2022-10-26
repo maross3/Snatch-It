@@ -14,7 +14,8 @@
   "permissions": [
     "tabs",
     "bookmarks",
-    "tabGroups"
+    "tabGroups",
+    "storage"
   ],
   "background": {
     "service_worker": "src/background.js"

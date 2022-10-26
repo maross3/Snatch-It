@@ -1,5 +1,5 @@
-import { graph } from "./graph.js";
 import { makeTabs } from "./tabs_helper.js"
+import {graph} from "./graph";
 
 // todo populate graph
 // graph.js
@@ -47,6 +47,9 @@ const allTabs = await chrome.tabs.query({ });
 let tabs = makeTabs(allTabs);
 // code goes here... so silent :O
 
+graph.serializeGraph();
+
+console.log(graph.deserializeGraph());
 // MVC:
 // graph.js == model.
 // view_ports.js == view.
