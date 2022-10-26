@@ -1,5 +1,5 @@
 
-export function populateTabs(tabs, template){
+function populateTabs(tabs, template){
     let elements = new Set();
 
     for (const tab of tabs) {
@@ -21,4 +21,22 @@ export function populateTabs(tabs, template){
         elements.add(element);
     }
     return elements;
+}
+
+export function makeTabs(tabs) {
+    const collator = new Intl.Collator();
+    tabs.sort((a, b) => collator.compare(a.title, b.title));
+
+    const template = document.getElementById("li_template");
+    const elements = populateTabs(tabs, template);
+
+    document.querySelector("ul").append(...elements);
+
+    const button = document.querySelector("button");
+
+    button.addEventListener("click", async () => {
+        const tabIds = tabs.map(({ id }) => id);
+        const group = await chrome.tabs.group({ tabIds });
+        await chrome.tabGroups.update(group, { title: "DOCS" });
+    });
 }
