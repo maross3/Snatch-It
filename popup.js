@@ -3,7 +3,7 @@ import { Graph } from "./graph.js";
 // todo export JSON obj to cookies, parse and include here
 // get all active and inactive tabs
 const tabs = await chrome.tabs.query({
-  active: true
+  active: false
 });
 
 // translation friendly sorting, noice
